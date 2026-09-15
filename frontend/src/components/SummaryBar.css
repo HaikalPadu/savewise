@@ -1,0 +1,35 @@
+.summary {
+  display: grid;
+  /* Wide enough that amounts like RM 16,500.00 stay on one line. */
+  grid-template-columns: repeat(auto-fit, minmax(11.5rem, 1fr));
+  gap: 1rem;
+}
+
+.summary__item {
+  padding: 1rem 1.1rem;
+}
+
+.summary__label {
+  margin: 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.summary__value {
+  margin: 0.35rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summary__value {
+    font-size: 1.05rem;
+  }
+}

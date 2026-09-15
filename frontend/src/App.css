@@ -1,0 +1,91 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__header {
+  background: linear-gradient(120deg, var(--color-primary-dark), var(--color-primary));
+  color: #fff;
+}
+
+.app__header-inner {
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem;
+}
+
+.app__logo {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+
+.app__tagline {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.app__main {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.app__goals {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app__goals-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.app__section-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 650;
+}
+
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: 1.25rem;
+}
+
+.app__footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.app__footer p {
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .app__header-inner,
+  .app__main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .goal-grid {
+    grid-template-columns: 1fr;
+  }
+}

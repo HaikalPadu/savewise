@@ -1,0 +1,149 @@
+.goal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.goal-card--complete {
+  border-color: var(--color-success-border);
+}
+
+.goal-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.goal-card__name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.badge {
+  flex: 0 0 auto;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge--success {
+  background: var(--color-success-soft);
+  color: var(--color-success-text);
+}
+
+.goal-card__progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.goal-card__bar {
+  height: 0.6rem;
+  border-radius: 999px;
+  background: var(--color-surface-alt);
+  overflow: hidden;
+}
+
+.goal-card__bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  transition: width 0.3s ease;
+}
+
+.goal-card--complete .goal-card__bar-fill {
+  background: var(--color-success);
+}
+
+.goal-card__percentage {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* One row per amount, so "RM 1,000.00" never breaks across lines. */
+.goal-card__amounts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.85rem;
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-md);
+}
+
+.goal-card__amounts > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.goal-card__amounts dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.goal-card__amounts dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 650;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.goal-card__amount--saved {
+  color: var(--color-success-text);
+}
+
+.goal-card__amount--remaining {
+  color: var(--color-primary-dark);
+}
+
+.goal-card__done {
+  margin: 0;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-md);
+  background: var(--color-success-soft);
+  color: var(--color-success-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.add-savings__row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.add-savings__row input {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.goal-card__footer {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.goal-card__confirm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .goal-card__confirm {
+    justify-content: space-between;
+  }
+}

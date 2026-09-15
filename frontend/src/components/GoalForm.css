@@ -1,0 +1,40 @@
+.goal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.goal-form__title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 650;
+}
+
+.goal-form__fields {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  gap: 1rem;
+  align-items: start;
+}
+
+.goal-form__fields > .button {
+  /* Line the button up with the inputs, under the labels. */
+  margin-top: 1.7rem;
+}
+
+.goal-form__error {
+  margin: 0;
+  color: var(--color-danger-text);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .goal-form__fields {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-form__fields > .button {
+    margin-top: 0.25rem;
+    width: 100%;
+  }
+}
